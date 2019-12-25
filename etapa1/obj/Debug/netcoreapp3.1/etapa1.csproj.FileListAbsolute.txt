@@ -1,0 +1,11 @@
+C:\Users\juans\Downloads\c#\etapa1\bin\Debug\netcoreapp3.1\etapa1.exe
+C:\Users\juans\Downloads\c#\etapa1\bin\Debug\netcoreapp3.1\etapa1.deps.json
+C:\Users\juans\Downloads\c#\etapa1\bin\Debug\netcoreapp3.1\etapa1.runtimeconfig.json
+C:\Users\juans\Downloads\c#\etapa1\bin\Debug\netcoreapp3.1\etapa1.runtimeconfig.dev.json
+C:\Users\juans\Downloads\c#\etapa1\bin\Debug\netcoreapp3.1\etapa1.dll
+C:\Users\juans\Downloads\c#\etapa1\bin\Debug\netcoreapp3.1\etapa1.pdb
+C:\Users\juans\Downloads\c#\etapa1\obj\Debug\netcoreapp3.1\etapa1.csprojAssemblyReference.cache
+C:\Users\juans\Downloads\c#\etapa1\obj\Debug\netcoreapp3.1\etapa1.AssemblyInfoInputs.cache
+C:\Users\juans\Downloads\c#\etapa1\obj\Debug\netcoreapp3.1\etapa1.AssemblyInfo.cs
+C:\Users\juans\Downloads\c#\etapa1\obj\Debug\netcoreapp3.1\etapa1.dll
+C:\Users\juans\Downloads\c#\etapa1\obj\Debug\netcoreapp3.1\etapa1.pdb
