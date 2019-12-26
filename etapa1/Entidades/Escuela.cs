@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace CoreEscurela.Entidades
 {
@@ -16,7 +17,8 @@ namespace CoreEscurela.Entidades
         public string Ciudad { get; set; }
         public TiposEscuela TipoEscuela { get; set; }
 
-        public Curso[] Cursos { get; set; }
+        //        public Curso[] Cursos { get; set; }
+        public List<Curso> Cursos { get; set; }
         /**
         public Escuela(string nombre, int año) 
         { 

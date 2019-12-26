@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CoreEscurela.Entidades;
 using static System.Console;
 
@@ -12,6 +13,7 @@ namespace etapa1
                                         , ciudad: "Lima");
             WriteLine(escuela.Nombre + " " + escuela.AñoDeCreacio);
             escuela.TipoEscuela = TiposEscuela.Primaria;
+            WriteLine(escuela.TipoEscuela);
             //escuela.Ciudad = "Medellín";
             //escuela.Pais = "Colombia";
             /**
@@ -20,18 +22,32 @@ namespace etapa1
                 new Curso() { Nombre = "201" },
                 new Curso() { Nombre = "301" }
             };**/
-
-            escuela.Cursos = new Curso[]{
+            /**  escuela.Cursos = new Curso[]{
                 new Curso() { Nombre = "101" },
                 new Curso() { Nombre = "201" },
                 new Curso() { Nombre = "301" }
-            };
+            };**/
             Curso[] arreglosCursos = {
                 new Curso() { Nombre = "101" },
                 new Curso() { Nombre = "201" },
                 new Curso() { Nombre = "301" }
             };
 
+            escuela.Cursos = new List<Curso>(){
+                new Curso() { Nombre = "101", Jornada = TiposJornada.Mañana },
+                new Curso() { Nombre = "201", Jornada = TiposJornada.Mañana },
+                new Curso() { Nombre = "301", Jornada = TiposJornada.Mañana }
+            };
+            escuela.Cursos.Add(new Curso() { Nombre = "102", Jornada = TiposJornada.Tarde });
+            escuela.Cursos.Add(new Curso() { Nombre = "202", Jornada = TiposJornada.Tarde });
+
+            var otrColeccion = new List<Curso>(){
+                new Curso() { Nombre = "401", Jornada = TiposJornada.Mañana },
+                new Curso() { Nombre = "501", Jornada = TiposJornada.Mañana },
+                new Curso() { Nombre = "502", Jornada = TiposJornada.Tarde }
+            };
+
+            escuela.Cursos.AddRange(otrColeccion);
             WriteLine("========================");
             ImprimirCursoForEach(arreglosCursos);
             ImprimirCursosEscuela(escuela);
