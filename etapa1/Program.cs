@@ -44,7 +44,7 @@ namespace etapa1
             var otrColeccion = new List<Curso>(){
                 new Curso() { Nombre = "401", Jornada = TiposJornada.Mañana },
                 new Curso() { Nombre = "501", Jornada = TiposJornada.Mañana },
-                new Curso() { Nombre = "502", Jornada = TiposJornada.Tarde }
+                new Curso() { Nombre = "501", Jornada = TiposJornada.Tarde }
             };
 
             escuela.Cursos.AddRange(otrColeccion);
@@ -54,8 +54,15 @@ namespace etapa1
             //escuela.Cursos.Remove(tmp);
             ImprimirCursosEscuela(escuela);
             WriteLine("==================");
-            Predicate<Curso> miAlgoritmo = Predicado;
-            escuela.Cursos.RemoveAll(miAlgoritmo);
+            //Predicate<Curso> miAlgoritmo = Predicado;
+            // escuela.Cursos.RemoveAll(Predicado);
+            escuela.Cursos.RemoveAll(delegate (Curso cur)
+            {
+                return cur.Nombre == "301";
+            });
+            //Expresion Lambda
+            escuela.Cursos.RemoveAll((cur) => cur.Nombre == "501" && cur.Jornada == Ti);
+
             ImprimirCursosEscuela(escuela);
             //ImprimirCursoForEach(arreglosCursos);
 
@@ -63,7 +70,7 @@ namespace etapa1
 
         private static bool Predicado(Curso curobj)
         {
-            return curobj.Nombre == "301" || curobj.Nombre == "502";
+            return curobj.Nombre == "301" || curobj.Nombre == "502" || curobj.Jornada == TiposJornada.Mañana;
         }
 
         private static void ImprimirCursosEscuela(Escuela escuela)
