@@ -61,7 +61,7 @@ namespace etapa1
                 return cur.Nombre == "301";
             });
             //Expresion Lambda
-            escuela.Cursos.RemoveAll((cur) => cur.Nombre == "501" && cur.Jornada == Ti);
+            escuela.Cursos.RemoveAll((cur) => cur.Nombre == "501" && cur.Jornada == TiposJornada.Mañana);
 
             ImprimirCursosEscuela(escuela);
             //ImprimirCursoForEach(arreglosCursos);
