@@ -48,10 +48,22 @@ namespace etapa1
             };
 
             escuela.Cursos.AddRange(otrColeccion);
-            WriteLine("========================");
-            ImprimirCursoForEach(arreglosCursos);
-            ImprimirCursosEscuela(escuela);
 
+            //Curso tmp = new Curso { Nombre = "101-Vacacional", Jornada = TiposJornada.Noche };
+            //ImprimirCursosEscuela(escuela);
+            //escuela.Cursos.Remove(tmp);
+            ImprimirCursosEscuela(escuela);
+            WriteLine("==================");
+            Predicate<Curso> miAlgoritmo = Predicado;
+            escuela.Cursos.RemoveAll(miAlgoritmo);
+            ImprimirCursosEscuela(escuela);
+            //ImprimirCursoForEach(arreglosCursos);
+
+        }
+
+        private static bool Predicado(Curso curobj)
+        {
+            return curobj.Nombre == "301" || curobj.Nombre == "502";
         }
 
         private static void ImprimirCursosEscuela(Escuela escuela)
