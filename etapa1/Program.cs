@@ -9,7 +9,9 @@ namespace CoreEscurela
         {
             var engine = new EscuelaEngine();
             engine.inicializar();
+            Printer.DibujarTitulo("Bienvenidos a la escuela");
             ImprimirCursosEscuela(engine.Escuela);
+            Printer.Beep(10000,cantidad:10);
         }
 
         private static bool Predicado(Curso curobj)
@@ -19,9 +21,7 @@ namespace CoreEscurela
 
         private static void ImprimirCursosEscuela(Escuela escuela)
         {
-            WriteLine("========================");
-            WriteLine("Cursos de la escuela");
-            WriteLine("========================");
+            Printer.DibujarTitulo("Cursos de la escuela");
             if (escuela?.Cursos != null)
             {
                 foreach (var curso in escuela.Cursos)
