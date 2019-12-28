@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CoreEscurela.Entidades
 {
-    class Escuela
+    public class Escuela
     {
         string nombre;
         public string Nombre
