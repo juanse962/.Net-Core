@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace CoreEscurela.Entidades
 {
@@ -7,6 +8,8 @@ namespace CoreEscurela.Entidades
         public string Nombre { get; set; }
         public string UniqueId { get; set; }
         public TiposJornada Jornada { get; set; }
+        public List<Asignatura> Asignaturas { get; set; }
+        public List<Alumno> Alumnos { get; set; }
 
         public Curso() => UniqueId = Guid.NewGuid().ToString();
 
